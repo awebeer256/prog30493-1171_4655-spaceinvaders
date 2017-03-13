@@ -13,4 +13,10 @@ public class GameMgr : MonoBehaviour {
 		GAME_OVER
 	}
 
+	private GameState state;
+	public GameState State {
+		private set { state = value; }
+		get { return state; }
+	}
+
 }
