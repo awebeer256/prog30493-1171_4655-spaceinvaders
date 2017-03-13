@@ -23,6 +23,10 @@ public class GameMgr : MonoBehaviour {
 		State = GameState.TITLE_MENUS;
 	}
 
+	/// <summary>
+	/// Advances game to the next state, handling the associated transitions.
+	/// </summary>
+	/// <returns><c>true</c>, if state was advanced, <c>false</c> otherwise.</returns>
 	public bool AdvanceState() {
 		if (State == GameState.INVALID || State == GameState.NONE) {
 			Debug.LogError ("Attempted to advance game state while current state was " + State);
