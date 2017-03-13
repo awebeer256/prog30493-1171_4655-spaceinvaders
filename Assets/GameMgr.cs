@@ -22,4 +22,21 @@ public class GameMgr : MonoBehaviour {
 	void Start() {
 		State = GameState.TITLE_MENUS;
 	}
+
+	public bool AdvanceState() {
+		if (State == GameState.INVALID || State == GameState.NONE) {
+			Debug.LogError ("Attempted to advance game state while current state was " + State);
+			return false;
+		} else if (State == GameState.GAME_OVER) {
+			return false;
+		}
+
+
+		//state transition logic goes here
+
+
+		//temporary
+		Debug.LogError("Reached incomplete section of GameMgr.AdvanceState()");
+		return false;
+	}
 }
