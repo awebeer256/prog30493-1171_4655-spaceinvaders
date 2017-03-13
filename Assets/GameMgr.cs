@@ -19,4 +19,7 @@ public class GameMgr : MonoBehaviour {
 		get { return state; }
 	}
 
+	void Start() {
+		State = GameState.TITLE_MENUS;
+	}
 }
