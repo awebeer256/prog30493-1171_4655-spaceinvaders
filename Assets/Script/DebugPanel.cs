@@ -21,6 +21,6 @@ public class DebugPanel : MonoBehaviour {
 	}
 
 	private void PanelUpdate() {
-
+		timeDisp.text = string.Format ("{0:N2}", Time.time);
 	}
 }
