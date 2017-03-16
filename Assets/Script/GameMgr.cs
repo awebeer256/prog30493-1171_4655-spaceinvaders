@@ -28,7 +28,7 @@ public class GameMgr : MonoBehaviour {
 	/// </summary>
 	/// <returns><c>true</c>, if state was advanced, <c>false</c> otherwise.</returns>
 	public bool AdvanceState() {
-		if (State == GameState.INVALID || State == GameState.NONE) {
+		if (State == GameState.INVALID) {
 			Debug.LogError ("Attempted to advance game state while current state was " + State);
 			return false;
 		} else if (State == GameState.GAME_OVER) {
