@@ -41,7 +41,8 @@ public class GameMgr : MonoBehaviour {
 				Debug.LogError ("Attempted to advance game state while current state was " + State);
 				return false;
 			}
-		case GameState.GAME_OVER || GameState.NONE:
+		case GameState.GAME_OVER:
+		case GameState.NONE:
 			{
 				SetupGame ();
 				return true;
