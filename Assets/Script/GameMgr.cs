@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Adam: I feel that having separate "manager" classes (e.g. ScoreManager, UIManager, etc.) is more trouble than it's
+/// worth, so for now, I'd like to try doing everything in this one class.
+/// </summary>
 public class GameMgr : MonoBehaviour {
 
 	public enum GameState {
