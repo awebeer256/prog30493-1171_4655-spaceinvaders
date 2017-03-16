@@ -42,17 +42,17 @@ public class GameMgr : MonoBehaviour {
 		case GameState.NONE:
 			{
 				//TODO show the title screen
-				return true;
+				return false; //switch to true once this is implemented
 			}
 		case GameState.TITLE_MENUS:
 			{
 				//TODO show main game screen in game-start configuration
-				return true;
+				return false; //switch to true once this is implemented
 			}
 		case GameState.IN_GAME:
 			{
 				//TODO show game-over screen
-				return true;
+				return false; //switch to true once this is implemented
 			}
 		default: //temporary
 			{
