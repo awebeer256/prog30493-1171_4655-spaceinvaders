@@ -31,7 +31,7 @@ public class GameMgr : MonoBehaviour {
 	/// Shows the title screen
 	/// </summary>
 	private void SetupGame() {
-		
+		//TODO: (self-explanatory)
 	}
 
 	/// <summary>
@@ -51,6 +51,7 @@ public class GameMgr : MonoBehaviour {
 				SetupGame ();
 				return true;
 			}
+		//TODO: more cases
 		default: //temporary
 			{
 				Debug.LogError ("Reached incomplete section of GameMgr.AdvanceState()");
