@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 1631838603}
   - component: {fileID: 1631838605}
   - component: {fileID: 1631838604}
+  - component: {fileID: 1631838606}
   m_Layer: 5
   m_Name: DebugPanel
   m_TagString: Untagged
@@ -405,6 +406,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1631838602}
+--- !u!114 &1631838606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1631838602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7d1b1ff696fe940816449314c745ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1914231804
 GameObject:
   m_ObjectHideFlags: 0
