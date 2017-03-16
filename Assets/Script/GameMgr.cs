@@ -24,6 +24,13 @@ public class GameMgr : MonoBehaviour {
 	}
 
 	/// <summary>
+	/// Shows the title screen
+	/// </summary>
+	private void SetupGame() {
+		
+	}
+
+	/// <summary>
 	/// Advances game to the next state, handling the associated transitions.
 	/// </summary>
 	/// <returns><c>true</c>, if state was advanced, <c>false</c> otherwise.</returns>
@@ -31,8 +38,8 @@ public class GameMgr : MonoBehaviour {
 		if (State == GameState.INVALID) {
 			Debug.LogError ("Attempted to advance game state while current state was " + State);
 			return false;
-		} else if (State == GameState.GAME_OVER) {
-			return false;
+		} else if (State == GameState.GAME_OVER || State == GameState.NONE) {
+			SetupGame ();
 		}
 
 
