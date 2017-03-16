@@ -20,7 +20,14 @@ public class GameMgr : MonoBehaviour {
 	}
 
 	void Start() {
-		State = GameState.TITLE_MENUS;
+		AdvanceState ();
+	}
+
+	/// <summary>
+	/// Shows the title screen
+	/// </summary>
+	private void SetupGame() {
+		
 	}
 
 	/// <summary>
@@ -28,19 +35,23 @@ public class GameMgr : MonoBehaviour {
 	/// </summary>
 	/// <returns><c>true</c>, if state was advanced, <c>false</c> otherwise.</returns>
 	public bool AdvanceState() {
-		if (State == GameState.INVALID || State == GameState.NONE) {
-			Debug.LogError ("Attempted to advance game state while current state was " + State);
-			return false;
-		} else if (State == GameState.GAME_OVER) {
-			return false;
+		switch (State) {
+		case GameState.INVALID:
+			{
+				Debug.LogError ("Attempted to advance game state while current state was " + State);
+				return false;
+			}
+		case GameState.GAME_OVER:
+		case GameState.NONE:
+			{
+				SetupGame ();
+				return true;
+			}
+		default: //temporary
+			{
+				Debug.LogError ("Reached incomplete section of GameMgr.AdvanceState()");
+				return false;
+			}
 		}
-
-
-		//state transition logic goes here
-
-
-		//temporary
-		Debug.LogError("Reached incomplete section of GameMgr.AdvanceState()");
-		return false;
 	}
 }
