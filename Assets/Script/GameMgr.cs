@@ -35,19 +35,22 @@ public class GameMgr : MonoBehaviour {
 	/// </summary>
 	/// <returns><c>true</c>, if state was advanced, <c>false</c> otherwise.</returns>
 	public bool AdvanceState() {
-		if (State == GameState.INVALID) {
-			Debug.LogError ("Attempted to advance game state while current state was " + State);
-			return false;
-		} else if (State == GameState.GAME_OVER || State == GameState.NONE) {
-			SetupGame ();
+		switch (State) {
+		case GameState.INVALID:
+			{
+				Debug.LogError ("Attempted to advance game state while current state was " + State);
+				return false;
+			}
+		case GameState.GAME_OVER || GameState.NONE:
+			{
+				SetupGame ();
+				return true;
+			}
+		default: //temporary
+			{
+				Debug.LogError ("Reached incomplete section of GameMgr.AdvanceState()");
+				return false;
+			}
 		}
-
-
-		//state transition logic goes here
-
-
-		//temporary
-		Debug.LogError("Reached incomplete section of GameMgr.AdvanceState()");
-		return false;
 	}
 }
