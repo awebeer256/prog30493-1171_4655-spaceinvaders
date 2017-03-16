@@ -38,7 +38,7 @@ public class GameMgr : MonoBehaviour {
 	/// Advances game to the next state, handling the associated transitions.
 	/// </summary>
 	/// <returns><c>true</c>, if state was advanced, <c>false</c> otherwise.</returns>
-	public bool AdvanceState() {
+	public bool AdvanceState() { //Not sure whether we need a return value, but it's there in case
 		switch (State) {
 		case GameState.INVALID:
 			{
