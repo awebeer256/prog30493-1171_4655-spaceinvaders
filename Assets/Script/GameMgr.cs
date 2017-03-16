@@ -44,7 +44,11 @@ public class GameMgr : MonoBehaviour {
 				//TODO show the title screen
 				return true;
 			}
-		//TODO more cases
+		case GameState.TITLE_MENUS:
+			{
+				//TODO show main game screen in game-start configuration
+				return true;
+			}
 		default: //temporary
 			{
 				Debug.LogError ("GameMgr.AdvanceState() encountered unhandled current state: " + State);
