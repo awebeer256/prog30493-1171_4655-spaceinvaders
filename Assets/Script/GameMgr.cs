@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Adam: I feel that having separate "manager" classes (e.g. ScoreManager, UIManager, etc.) is more trouble than it's
+/// worth, so for now, I'd like to try doing everything in this one class.
+/// </summary>
 public class GameMgr : MonoBehaviour {
 
 	public enum GameState {
@@ -27,14 +31,14 @@ public class GameMgr : MonoBehaviour {
 	/// Shows the title screen
 	/// </summary>
 	private void SetupGame() {
-		
+		//TODO: (self-explanatory)
 	}
 
 	/// <summary>
 	/// Advances game to the next state, handling the associated transitions.
 	/// </summary>
 	/// <returns><c>true</c>, if state was advanced, <c>false</c> otherwise.</returns>
-	public bool AdvanceState() {
+	public bool AdvanceState() { //Not sure whether we need a return value, but it's there in case
 		switch (State) {
 		case GameState.INVALID:
 			{
@@ -47,9 +51,10 @@ public class GameMgr : MonoBehaviour {
 				SetupGame ();
 				return true;
 			}
+		//TODO: more cases
 		default: //temporary
 			{
-				Debug.LogError ("Reached incomplete section of GameMgr.AdvanceState()");
+				Debug.LogError ("GameMgr.AdvanceState() encountered unhandled current state: " + State);
 				return false;
 			}
 		}
