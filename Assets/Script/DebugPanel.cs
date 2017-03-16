@@ -8,7 +8,7 @@ using UnityEngine.UI;
 /// </summary>
 public class DebugPanel : MonoBehaviour {
 
-	public Text timedisp;
+	public Text timeDisp;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +17,10 @@ public class DebugPanel : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		PanelUpdate ();
+	}
+
+	private void PanelUpdate() {
+
 	}
 }
