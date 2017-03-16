@@ -49,6 +49,11 @@ public class GameMgr : MonoBehaviour {
 				//TODO show main game screen in game-start configuration
 				return true;
 			}
+		case GameState.IN_GAME:
+			{
+				//TODO show game-over screen
+				return true;
+			}
 		default: //temporary
 			{
 				Debug.LogError ("GameMgr.AdvanceState() encountered unhandled current state: " + State);
