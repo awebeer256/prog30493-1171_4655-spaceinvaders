@@ -20,7 +20,7 @@ public class GameMgr : MonoBehaviour {
 	}
 
 	void Start() {
-		State = GameState.TITLE_MENUS;
+		AdvanceState ();
 	}
 
 	/// <summary>
