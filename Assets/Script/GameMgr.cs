@@ -54,7 +54,7 @@ public class GameMgr : MonoBehaviour {
 				//TODO show game-over screen
 				return false; //switch to true once this is implemented
 			}
-		default: //temporary
+		default:
 			{
 				Debug.LogError ("GameMgr.AdvanceState() encountered unhandled current state: " + State);
 				return false;
