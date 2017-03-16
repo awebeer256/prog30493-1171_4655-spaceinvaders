@@ -21,6 +21,6 @@ public class DebugPanel : MonoBehaviour {
 	}
 
 	private void PanelUpdate() {
-		timeDisp.text = Time.time;
+		timeDisp.text = Time.time.ToString();
 	}
 }
