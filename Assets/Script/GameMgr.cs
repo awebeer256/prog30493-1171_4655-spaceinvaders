@@ -28,13 +28,6 @@ public class GameMgr : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Shows the title screen
-	/// </summary>
-	private void SetupGame() {
-		//TODO: (self-explanatory)
-	}
-
-	/// <summary>
 	/// Advances game to the next state, handling the associated transitions.
 	/// </summary>
 	/// <returns><c>true</c>, if state was advanced, <c>false</c> otherwise.</returns>
@@ -48,11 +41,20 @@ public class GameMgr : MonoBehaviour {
 		case GameState.GAME_OVER:
 		case GameState.NONE:
 			{
-				SetupGame ();
-				return true;
+				//TODO show the title screen
+				return false; //switch to true once this is implemented
 			}
-		//TODO: more cases
-		default: //temporary
+		case GameState.TITLE_MENUS:
+			{
+				//TODO show main game screen in game-start configuration
+				return false; //switch to true once this is implemented
+			}
+		case GameState.IN_GAME:
+			{
+				//TODO show game-over screen
+				return false; //switch to true once this is implemented
+			}
+		default:
 			{
 				Debug.LogError ("GameMgr.AdvanceState() encountered unhandled current state: " + State);
 				return false;
