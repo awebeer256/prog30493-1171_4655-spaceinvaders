@@ -54,7 +54,7 @@ public class GameMgr : MonoBehaviour {
 		//TODO: more cases
 		default: //temporary
 			{
-				Debug.LogError ("Reached incomplete section of GameMgr.AdvanceState()");
+				Debug.LogError ("GameMgr.AdvanceState() encountered unhandled current state: " + State);
 				return false;
 			}
 		}
