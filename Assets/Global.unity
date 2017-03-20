@@ -161,6 +161,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 410348183}
+  - component: {fileID: 410348184}
   m_Layer: 0
   m_Name: GLOBAL
   m_TagString: Untagged
@@ -348,6 +349,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &410348184
+  m_GameObject: {fileID: 410348182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58928f10c08ff214ba26523223311318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1481306825
 GameObject:
   m_ObjectHideFlags: 0
