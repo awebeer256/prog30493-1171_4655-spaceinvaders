@@ -4,29 +4,26 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
-	public GameObject Enemy; //enemy to hold the script
-	public float movementSpeed; //speed at which the enemies move
-	private  Transform currentPoint; //current point enemy is at
-	public Transform[] movementPoints; //array to hold two points that enemies will move between
-	public int pointSelection; //used to change the points enemies will move too
+	public int dir = 1; //changes direction of enemies
+	private int movementSpeed = 2; //controls the speed of the enemies 
+
 
 	void EnemyMovementUpdate(){
 
-		Enemy.transform.position = Vector3.MoveTowards (Enemy.transform.position, currentPoint.transform.position, Time.deltaTime * movementSpeed);
+		transform.Translate (Vector3.right * dir * movementSpeed * Time.deltaTime);
 
-		if (Enemy.transform.position == currentPoint.position) {
-			pointSelection++;
-			if (pointSelection == movementPoints.Length) {
-				pointSelection = 0;
-			}
-
-			currentPoint = movementPoints [pointSelection];
+		if (transform.position.x >= 3.5) {
+			dir = -1;
+			//transform.position.y = transform.position.y - 1;
+		} else if (transform.position.x <= -3.5) {
+			dir = 1;
+			//transform.position.y = transform.position.y - 1;
 		}
 	}
 
 	// Use this for initialization
 	void Start () {
-		currentPoint = movementPoints[pointSelection];
+		//currentPoint = movementPoints[pointSelection];
 	}
 	
 	// Update is called once per frame
