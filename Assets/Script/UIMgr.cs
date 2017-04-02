@@ -11,7 +11,11 @@ public class UIMgr : MonoBehaviour {
 		None = 0,
 		TitleScreen,
 		LevelSelect,
-		InGame
+		InGame,
+
+		FirstState = TitleScreen,
+		LastState = InGame
+		//NumStates = ((LastState - FirstState) + 1)
 	};
 
 	public List<isaUIPanel> panels;
@@ -26,8 +30,43 @@ public class UIMgr : MonoBehaviour {
 		
 	}
 
+	public void IncState()
+	{
+		state++;
+		if (state > eUIMgrState.LastState) {
+			state = eUIMgrState.LastState;
+		}
+		
+	}
+
+	public void DecState()
+	{
+		state--;
+		if (state < eUIMgrState.FirstState) {
+			state = eUIMgrState.FirstState;
+		}
+
+	}
+	public void ShowCurrentPanel() 
+	{
+		foreach (isaUIPanel iap in panels) 
+		{
+			if (iap.state == state) {
+				iap.gameObject.SetActive (true);
+			} else {
+				iap.gameObject.SetActive (false);
+			}
+				
+		}
+	}
+
 	public void UIMgrUpdate()
 	{
+		if (state != prevState)
+		{
+			ShowCurrentPanel ();
+		}
+
 		prevState = state;
 	}
 	

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class isaUIPanel : MonoBehaviour {
 
+	public UIMgr.eUIMgrState state;
 	// Use this for initialization
 	void Start () {
 		
