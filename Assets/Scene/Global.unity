@@ -7444,6 +7444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 168089732}
   - component: {fileID: 168089733}
+  - component: {fileID: 168089734}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Untagged
@@ -7485,6 +7486,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &168089734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 168089731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7347ebf5dba318940b46170c786ecff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 1222286512214934, guid: 05c08f9830282814b99429ee38d8b5cd,
+    type: 2}
+  shootTime: 0
+  timeCounter: 0
 --- !u!1 &169833704
 GameObject:
   m_ObjectHideFlags: 0
@@ -27318,6 +27334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694815942}
   - component: {fileID: 694815943}
+  - component: {fileID: 694815944}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Untagged
@@ -27359,6 +27376,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &694815944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 694815941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7347ebf5dba318940b46170c786ecff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 1222286512214934, guid: 05c08f9830282814b99429ee38d8b5cd,
+    type: 2}
+  shootTime: 0
+  timeCounter: 0
 --- !u!1 &696493492
 GameObject:
   m_ObjectHideFlags: 0
@@ -42536,6 +42568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1073341052}
   - component: {fileID: 1073341053}
+  - component: {fileID: 1073341054}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Untagged
@@ -42577,6 +42610,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1073341054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1073341051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7347ebf5dba318940b46170c786ecff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 1222286512214934, guid: 05c08f9830282814b99429ee38d8b5cd,
+    type: 2}
+  shootTime: 0
+  timeCounter: 0
 --- !u!1 &1073397650
 GameObject:
   m_ObjectHideFlags: 0
@@ -43040,6 +43088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1082515642}
   - component: {fileID: 1082515643}
+  - component: {fileID: 1082515644}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Untagged
@@ -43081,6 +43130,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1082515644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1082515641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7347ebf5dba318940b46170c786ecff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 1222286512214934, guid: 05c08f9830282814b99429ee38d8b5cd,
+    type: 2}
+  shootTime: 0
+  timeCounter: 0
 --- !u!1 &1083830230
 GameObject:
   m_ObjectHideFlags: 0
@@ -44228,6 +44292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1106809098}
   - component: {fileID: 1106809099}
+  - component: {fileID: 1106809100}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Untagged
@@ -44269,6 +44334,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1106809100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1106809097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7347ebf5dba318940b46170c786ecff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 1222286512214934, guid: 05c08f9830282814b99429ee38d8b5cd,
+    type: 2}
+  shootTime: 0
+  timeCounter: 0
 --- !u!1 &1107149098
 GameObject:
   m_ObjectHideFlags: 0
@@ -49363,6 +49443,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1281191669}
   - component: {fileID: 1281191670}
+  - component: {fileID: 1281191671}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Untagged
@@ -49404,6 +49485,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1281191671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281191668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7347ebf5dba318940b46170c786ecff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 1222286512214934, guid: 05c08f9830282814b99429ee38d8b5cd,
+    type: 2}
+  shootTime: 0
+  timeCounter: 0
 --- !u!1 &1281539958
 GameObject:
   m_ObjectHideFlags: 0
@@ -49652,6 +49748,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1287542324}
   - component: {fileID: 1287542325}
+  - component: {fileID: 1287542326}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Untagged
@@ -49693,6 +49790,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1287542326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1287542323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7347ebf5dba318940b46170c786ecff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 1222286512214934, guid: 05c08f9830282814b99429ee38d8b5cd,
+    type: 2}
+  shootTime: 0
+  timeCounter: 0
 --- !u!1 &1287707153
 GameObject:
   m_ObjectHideFlags: 0
@@ -56291,6 +56403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462626977}
   - component: {fileID: 1462626978}
+  - component: {fileID: 1462626979}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Untagged
@@ -56332,6 +56445,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1462626979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1462626976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7347ebf5dba318940b46170c786ecff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 1222286512214934, guid: 05c08f9830282814b99429ee38d8b5cd,
+    type: 2}
+  shootTime: 0
+  timeCounter: 0
 --- !u!1 &1463433043
 GameObject:
   m_ObjectHideFlags: 0
@@ -70066,6 +70194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1793815151}
   - component: {fileID: 1793815152}
+  - component: {fileID: 1793815153}
   m_Layer: 0
   m_Name: Enemy4
   m_TagString: Untagged
@@ -70107,6 +70236,21 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1793815153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1793815150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7347ebf5dba318940b46170c786ecff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBullet: {fileID: 1222286512214934, guid: 05c08f9830282814b99429ee38d8b5cd,
+    type: 2}
+  shootTime: 0
+  timeCounter: 0
 --- !u!1 &1793944055
 GameObject:
   m_ObjectHideFlags: 0
