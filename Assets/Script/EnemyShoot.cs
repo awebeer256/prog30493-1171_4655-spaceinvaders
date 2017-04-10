@@ -7,17 +7,20 @@ public class EnemyShoot : MonoBehaviour {
 	public GameObject enemyBullet;
 	public float shootTime;
 	public float timeCounter;
+	public GameObject enemyBlock;
 
 	void TimeCheck(){
 		timeCounter = 0.0f;
-		shootTime = Random.Range (3, 20);
+		shootTime = Random.Range (3, 15);
 	}
 
 	void EnemyShootingUpdate(){
 		timeCounter += Time.deltaTime;
 		if (timeCounter >= shootTime) {
-			Instantiate (enemyBullet, transform.position, Quaternion.identity);
-			TimeCheck ();
+			if (enemyBlock == null) {
+				Instantiate (enemyBullet, transform.position, Quaternion.identity);
+				TimeCheck ();
+			}
 		}
 
 	}
