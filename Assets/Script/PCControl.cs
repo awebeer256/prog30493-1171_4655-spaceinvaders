@@ -23,5 +23,9 @@ public class PCControl : MonoBehaviour {
 	private void HandleInputs() {
 		anim.SetBool ("walkLeft", Input.GetAxisRaw ("Horizontal") < -0.5);
 		anim.SetBool ("walkRight", Input.GetAxisRaw ("Horizontal") > 0.5);
+		if (Input.GetButton ("Fire3") || Input.GetButton("Fire2"))
+			anim.SetTrigger ("Attack");
+		else
+			anim.ResetTrigger ("Attack");
 	}
 }
