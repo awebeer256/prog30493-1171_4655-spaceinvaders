@@ -73679,6 +73679,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f5c286013f23c459a2b248678f700e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireballHeightOffset: 3
+  fireballDelay: 0.25
+  fireball: {fileID: 1900030428613948, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
 --- !u!1 &1874939723
 GameObject:
   m_ObjectHideFlags: 0
