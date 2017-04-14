@@ -982,6 +982,8 @@ GameObject:
   - component: {fileID: 4336830357116072}
   - component: {fileID: 95350474342051140}
   - component: {fileID: 65773287389884236}
+  - component: {fileID: 114383914115646604}
+  - component: {fileID: 114737444321478246}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -1987,6 +1989,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114383914115646604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1949763463806838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d5da13d941efb49a44c2373cda4fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114737444321478246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1949763463806838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95269206b606b3c46a0e94d232684327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137269581749452432
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
