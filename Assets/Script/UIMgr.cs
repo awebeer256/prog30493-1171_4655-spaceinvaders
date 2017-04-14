@@ -60,6 +60,17 @@ public class UIMgr : MonoBehaviour {
 		}
 	}
 
+	public void QuitGame()
+	{
+		Time.timeScale = 0;
+	}
+
+	public void ContinueGame()
+	{
+		//SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+		//PanelQuit.
+	}
+
 	public void UIMgrUpdate()
 	{
 		if (state != prevState)
