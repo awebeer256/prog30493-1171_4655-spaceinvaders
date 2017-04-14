@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class isPlayerOwned : MonoBehaviour {
+public class IsAEnemyOwned : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
