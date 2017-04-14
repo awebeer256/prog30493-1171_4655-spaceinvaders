@@ -6534,6 +6534,48 @@ Transform:
   m_Father: {fileID: 1333074751}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &151384266
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4082517810009126, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082517810009126, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082517810009126, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082517810009126, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082517810009126, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082517810009126, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082517810009126, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082517810009126, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &152390208
 GameObject:
   m_ObjectHideFlags: 0
@@ -62077,7 +62119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1592105128
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -73637,6 +73679,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f5c286013f23c459a2b248678f700e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireballHeightOffset: 3
+  fireballDelay: 0.25
+  fireball: {fileID: 1900030428613948, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
 --- !u!1 &1874939723
 GameObject:
   m_ObjectHideFlags: 0
