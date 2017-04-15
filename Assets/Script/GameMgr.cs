@@ -9,11 +9,16 @@ using UnityEngine.UI;
 /// </summary>
 public class GameMgr : MonoBehaviour {
 
+	public static int playerScore;
+	Text scoreText;
 
 	void Awake(){
+		scoreText = GetComponent<Text> ();
+		playerScore = 0;
 	}
 
-	void update(){
+	void Update(){
+		scoreText.text = "Score: " + playerScore;
 	}
 
 	public enum GameState {
