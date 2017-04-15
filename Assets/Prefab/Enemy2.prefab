@@ -625,6 +625,8 @@ GameObject:
   - component: {fileID: 4074606137155070}
   - component: {fileID: 95666050141129330}
   - component: {fileID: 65348279920322456}
+  - component: {fileID: 114032246610935214}
+  - component: {fileID: 114231713198163442}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Untagged
@@ -2196,6 +2198,28 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114032246610935214
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469956426916630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d5da13d941efb49a44c2373cda4fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114231713198163442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469956426916630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95269206b606b3c46a0e94d232684327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137075227102158796
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

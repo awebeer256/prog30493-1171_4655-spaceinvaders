@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class isAShield : MonoBehaviour {
+public class IsABoundary : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
