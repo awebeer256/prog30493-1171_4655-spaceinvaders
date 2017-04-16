@@ -1,12 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Adam: I feel that having separate "manager" classes (e.g. ScoreManager, UIManager, etc.) is more trouble than it's
 /// worth, so for now, I'd like to try doing everything in this one class.
 /// </summary>
 public class GameMgr : MonoBehaviour {
+
+	public static int playerLives; //value to keep track of number of lives for player
+	Text LivesText; //text to display those lives
+
+	void Awake(){
+		LivesText = GetComponent<Text> (); //gets text component to let us change text 
+		playerLives = 3; //initalize playerLives
+	}
+
+	void Update(){
+		LivesText.text = "Lives: " + playerLives; //sets text to show int value for player lives
+	}
 
 	public enum GameState {
 		INVALID = -1,
