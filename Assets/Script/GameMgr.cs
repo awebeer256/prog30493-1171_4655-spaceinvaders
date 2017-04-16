@@ -1,12 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// Adam: I feel that having separate "manager" classes (e.g. ScoreManager, UIManager, etc.) is more trouble than it's
 /// worth, so for now, I'd like to try doing everything in this one class.
 /// </summary>
 public class GameMgr : MonoBehaviour {
+
+	private int playerScore;
+	public Text scoreText;
+
+	public void AddToScore(int score){
+		playerScore += score;
+	}
+
+	void Awake(){
+		playerScore = 0;
+	}
+
+	void Update(){
+		scoreText.text = "SCORE: " + playerScore;
+	}
 
 	public enum GameState {
 		INVALID = -1,
