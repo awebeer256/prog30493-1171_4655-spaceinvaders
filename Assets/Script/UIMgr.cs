@@ -2,8 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+//using System.Web.UI.WebControls;
 
 public class UIMgr : MonoBehaviour {
+
+
+	public Canvas quitMenu;
+	//public Button playAgain;
 
 	public enum eUIMgrState
 	{
@@ -15,7 +21,7 @@ public class UIMgr : MonoBehaviour {
 
 		FirstState = TitleScreen,
 		LastState = InGame
-		//NumStates = ((LastState - FirstState) + 1)
+			//NumStates = ((LastState - FirstState) + 1)
 	};
 
 	public List<isaUIPanel> panels;
@@ -36,7 +42,7 @@ public class UIMgr : MonoBehaviour {
 		if (state > eUIMgrState.LastState) {
 			state = eUIMgrState.LastState;
 		}
-		
+
 	}
 
 	public void DecState()
@@ -56,19 +62,24 @@ public class UIMgr : MonoBehaviour {
 			} else {
 				iap.gameObject.SetActive (false);
 			}
-				
+
 		}
 	}
 
 	public void QuitGame()
 	{
+
+		quitMenu.enabled = false;
+		//quitPanel.Enabled = false;
 		Time.timeScale = 0;
+		//playAgain.enabled = true;
+		//Application.Quit ();
 	}
 
 	public void ContinueGame()
 	{
-		//SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
-		//PanelQuit.
+		quitMenu.enabled = false;
+		//SceneManager.LoadScene ("Global");
 	}
 
 	public void UIMgrUpdate()
@@ -80,7 +91,7 @@ public class UIMgr : MonoBehaviour {
 
 		prevState = state;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
