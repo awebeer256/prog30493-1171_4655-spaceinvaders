@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FireballBehaviour : MonoBehaviour {
 
+	private int addScore = 10;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -15,6 +17,9 @@ public class FireballBehaviour : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision) {
+		if (collision.gameObject.GetComponent<IsACharacter> () != null && collision.gameObject.GetComponent<IsAEnemyOwned> () != null) {
+			GameMgr.playerScore += addScore;
+		}
 		Destroy (gameObject);
 	}
 }
