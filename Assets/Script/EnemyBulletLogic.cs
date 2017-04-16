@@ -12,14 +12,14 @@ public class EnemyBulletLogic : MonoBehaviour {
 	 */
 
 	public GameObject enemyBullet;
+	private int reduceLife = 1;
 
 	void OnCollisionEnter(Collision collision){
 		if (collision.gameObject.GetComponent<IsAShield> () != null) {
 			//destory one block per sheild
 		} else if (collision.gameObject.GetComponent<IsACharacter> () != null 
 			&& collision.gameObject.GetComponent<IsAPlayerOwned>() != null) {
-			//check game manager for player lives,
-			//reduce number of lives for player,
+			GameMgr.playerLives -= reduceLife; //reduce number of lives for player
 			//respawn player in middle of screen 
 		}
 		Destroy (gameObject); //gameobject is destroyed when it collides with anything 
