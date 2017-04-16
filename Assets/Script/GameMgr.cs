@@ -9,7 +9,7 @@ using UnityEngine.UI;
 /// </summary>
 public class GameMgr : MonoBehaviour {
 
-	public static int playerScore;
+	private int playerScore;
 	public Text scoreText;
 
 	public void AddToScore(int score){
