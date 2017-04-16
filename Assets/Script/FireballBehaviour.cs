@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class FireballBehaviour : MonoBehaviour {
 
-	private int scoreValue = 10;
-
 	// Use this for initialization
 	void Start () {
-
+		
 	}
 	
 	// Update is called once per frame
@@ -18,6 +16,5 @@ public class FireballBehaviour : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collision) {
 		Destroy (gameObject);
-		GameMgr.playerScore += scoreValue;
 	}
 }

@@ -10,10 +10,13 @@ using UnityEngine.UI;
 public class GameMgr : MonoBehaviour {
 
 	public static int playerScore;
-	Text scoreText;
+	public Text scoreText;
+
+	public void AddToScore(int score){
+		playerScore += score;
+	}
 
 	void Awake(){
-		scoreText = GetComponent<Text> ();
 		playerScore = 0;
 	}
 
