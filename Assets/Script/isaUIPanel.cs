@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class isaUIPanel : MonoBehaviour {
+public class IsAUIPanel : MonoBehaviour {
 
 	public UIMgr.eUIMgrState state;
 	// Use this for initialization

@@ -7,55 +7,32 @@ using UnityEngine.SceneManagement;
 
 public class UIMgr : MonoBehaviour {
 
-
-	public Canvas quitMenu;
-	//public Button playAgain;
-
 	public enum eUIMgrState
 	{
 		Invalid = -1,
 		None = 0,
 		TitleScreen,
 		LevelSelect,
+		HighScore,
 		InGame,
-
-		FirstState = TitleScreen,
-		LastState = InGame
-			//NumStates = ((LastState - FirstState) + 1)
+		GameOver
 	};
 
-	public List<isaUIPanel> panels;
+	public List<IsAUIPanel> panels;
 	public eUIMgrState state;
-	private eUIMgrState prevState;
 
-
-
+	private GameMgr gameMgr;
 
 	// Use this for initialization
 	void Start () {
-		
+		gameMgr = GetComponent<GameMgr> ();
+		if (gameMgr == null)
+			Debug.LogError ("UIMgr couldn't find GameMgr.");
 	}
 
-	public void IncState()
-	{
-		state++;
-		if (state > eUIMgrState.LastState) {
-			state = eUIMgrState.LastState;
-		}
-
-	}
-
-	public void DecState()
-	{
-		state--;
-		if (state < eUIMgrState.FirstState) {
-			state = eUIMgrState.FirstState;
-		}
-
-	}
 	public void ShowCurrentPanel() 
 	{
-		foreach (isaUIPanel iap in panels) 
+		foreach (IsAUIPanel iap in panels) 
 		{
 			if (iap.state == state) {
 				iap.gameObject.SetActive (true);
@@ -66,35 +43,28 @@ public class UIMgr : MonoBehaviour {
 		}
 	}
 
-	public void QuitGame()
-	{
-
-		quitMenu.enabled = false;
-		//quitPanel.Enabled = false;
-		Time.timeScale = 0;
-		//playAgain.enabled = true;
-		//Application.Quit ();
+	private void GoTo(eUIMgrState destState) {
+		state = destState;
+		ShowCurrentPanel ();
 	}
 
-	public void ContinueGame()
-	{
-		quitMenu.enabled = false;
-		//SceneManager.LoadScene ("Global");
+	public void GoToTitle() {
+		GoTo (eUIMgrState.TitleScreen);
 	}
 
-	public void UIMgrUpdate()
-	{
-		if (state != prevState)
-		{
-			ShowCurrentPanel ();
-		}
-
-		prevState = state;
+	public void GoToLevelSelect() {
+		GoTo (eUIMgrState.LevelSelect);
 	}
 
-	// Update is called once per frame
-	void Update () {
+	public void GoToHighScore() {
+		GoTo (eUIMgrState.HighScore);
+	}
 
-		UIMgrUpdate ();
+	public void GoToInGame() {
+		GoTo (eUIMgrState.InGame);
+	}
+
+	public void GoToGameOver() {
+		GoTo (eUIMgrState.GameOver);
 	}
 }
