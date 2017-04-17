@@ -2333,9 +2333,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92f5c286013f23c459a2b248678f700e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnGrace: 3
   fireballHeightOffset: 3
   fireballDelay: 0.25
   fireball: {fileID: 1900030428613948, guid: 411d69bb9f6089a44a6341bca7fe31b7, type: 2}
+  prefab: {fileID: 100010, guid: 5f4067af37c25fb49a9f5600e1075848, type: 3}
 --- !u!114 &114760315664831016
 MonoBehaviour:
   m_ObjectHideFlags: 1
