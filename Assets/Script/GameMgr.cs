@@ -8,6 +8,8 @@ using UnityEngine;
 /// </summary>
 public class GameMgr : MonoBehaviour {
 
+	private UIMgr uiMgr;
+
 	public enum GameState {
 		INVALID = -1,
 		NONE = 0,
@@ -24,6 +26,9 @@ public class GameMgr : MonoBehaviour {
 	}
 
 	void Start() {
+		uiMgr = GetComponent<UIMgr> ();
+		if (uiMgr == null)
+			Debug.LogError ("GameMgr couldn't find UIMgr.");
 		AdvanceState ();
 	}
 
@@ -40,17 +45,23 @@ public class GameMgr : MonoBehaviour {
 		case GameState.GAME_OVER:
 		case GameState.NONE:
 			{
-				//TODO show the title screen
+				Time.timeScale = 0;
+				uiMgr.GoToTitle ();
+				state = GameState.TITLE_MENUS;
 				break;
 			}
 		case GameState.TITLE_MENUS:
 			{
-				//TODO show main game screen in game-start configuration
+				Time.timeScale = 1;
+				uiMgr.GoToInGame ();
+				state = GameState.IN_GAME;
 				break;
 			}
 		case GameState.IN_GAME:
 			{
-				//TODO show game-over screen
+				Time.timeScale = 0;
+				uiMgr.GoToGameOver ();
+				state = GameState.GAME_OVER;
 				break;
 			}
 		default:
@@ -59,5 +70,15 @@ public class GameMgr : MonoBehaviour {
 				break;
 			}
 		}
+	}
+
+	public void GoToLevel(int level) {
+		if (State != GameState.TITLE_MENUS) {
+			Debug.LogError ("Attempted to load a level from somewhere other than the title menus.");
+			return;
+		}
+
+		AdvanceState ();
+		//TODO load a particular level
 	}
 }

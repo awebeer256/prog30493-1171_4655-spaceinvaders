@@ -17829,11 +17829,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d52433aaf700d4489d0b745c74ce19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quitMenu: {fileID: 0}
   panels:
   - {fileID: 1948271865}
   - {fileID: 241049944}
   - {fileID: 1631838607}
+  - {fileID: 817988903}
   state: 1
 --- !u!1 &410857083
 GameObject:
@@ -34350,6 +34350,7 @@ GameObject:
   - component: {fileID: 817988900}
   - component: {fileID: 817988902}
   - component: {fileID: 817988901}
+  - component: {fileID: 817988903}
   m_Layer: 5
   m_Name: QuitPanel
   m_TagString: Untagged
@@ -34412,6 +34413,18 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 817988899}
+--- !u!114 &817988903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 817988899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8e70b99c77a58458b029f738431a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 4
 --- !u!1 &821548208
 GameObject:
   m_ObjectHideFlags: 0
@@ -45434,13 +45447,13 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 410348185}
-          m_MethodName: IncState
-          m_Mode: 1
+        - m_Target: {fileID: 410348184}
+          m_MethodName: GoToLevel
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -62520,6 +62533,7 @@ GameObject:
   - component: {fileID: 1517642217}
   - component: {fileID: 1517642219}
   - component: {fileID: 1517642218}
+  - component: {fileID: 1517642220}
   m_Layer: 5
   m_Name: StageThumbnail2
   m_TagString: Untagged
@@ -62580,6 +62594,36 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1517642216}
+--- !u!114 &1517642220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1517642216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 410348184}
+          m_MethodName: GoToLevel
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1518229298
 GameObject:
   m_ObjectHideFlags: 0
@@ -66613,7 +66657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a8e70b99c77a58458b029f738431a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 3
+  state: 4
 --- !u!1 &1632565960
 GameObject:
   m_ObjectHideFlags: 0
@@ -83642,7 +83686,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 410348185}
-        m_MethodName: IncState
+        m_MethodName: GoToLevelSelect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

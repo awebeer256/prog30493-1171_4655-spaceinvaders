@@ -21,9 +21,13 @@ public class UIMgr : MonoBehaviour {
 	public List<IsAUIPanel> panels;
 	public eUIMgrState state;
 
+	private GameMgr gameMgr;
+
 	// Use this for initialization
 	void Start () {
-		
+		gameMgr = GetComponent<GameMgr> ();
+		if (gameMgr == null)
+			Debug.LogError ("UIMgr couldn't find GameMgr.");
 	}
 
 	public void ShowCurrentPanel() 
