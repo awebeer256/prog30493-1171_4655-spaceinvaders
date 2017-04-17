@@ -22,8 +22,25 @@ public class EnemyBulletLogic : MonoBehaviour {
 			//reduce number of lives for player,
 			//respawn player in middle of screen 
 		}
+		//playerDead ();
 		Destroy (gameObject); //gameobject is destroyed when it collides with anything 
 	}
+
+	void playerDead(string gameObjectName){
+		GameObject gm = GameObject.Find(gameObjectName);
+		if (gm != null) {
+
+			AudioSource asource = gm.GetComponent<AudioSource> ();
+			if (asource == null) {
+
+				asource = gm.AddComponent<AudioSource> ();
+			}
+
+			asource.Stop();
+		}
+	}
+
+
 
 	// Use this for initialization
 	void Start () {

@@ -20,10 +20,24 @@ public class FireballBehaviour : MonoBehaviour {
 		
 	}
 
+	public void enemyExplosion(string gameObjectName){
+		GameObject gm = GameObject.Find(gameObjectName);
+		if (gm != null)
+		{
+			AudioSource asource = gm.GetComponent<AudioSource> ();
+			if (asource == null) {
+				asource = gm.AddComponent<AudioSource> ();
+			}
+			asource.Play ();
+		}
+	}
+
+
 	void OnCollisionEnter(Collision collision) {
 		if (collision.gameObject.GetComponent<UFOMovement> () != null) {
 			globalgo.GetComponent<GameMgr> ().AddToScore (bigScore);
 			Destroy (collision.gameObject);
+			//enemyExplosion ();
 		} else if (collision.gameObject.GetComponent<IsACharacter> () != null && collision.gameObject.GetComponent<IsAEnemyOwned> () != null) {
 			globalgo.GetComponent<GameMgr> ().AddToScore (addScore);
 			Destroy (collision.gameObject);
