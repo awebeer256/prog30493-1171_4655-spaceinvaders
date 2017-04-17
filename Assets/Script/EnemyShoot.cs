@@ -8,6 +8,7 @@ public class EnemyShoot : MonoBehaviour {
 	public float shootTime;
 	public float timeCounter;
 	public GameObject enemyBlock;
+	private static float bulletOffset = 0.5f;
 
 	void TimeCheck(){
 		timeCounter = 0.0f;
@@ -18,7 +19,7 @@ public class EnemyShoot : MonoBehaviour {
 		timeCounter += Time.deltaTime;
 		if (timeCounter >= shootTime) {
 			if (enemyBlock == null) {
-				Instantiate (enemyBullet, transform.position, Quaternion.identity);
+				Instantiate (enemyBullet, transform.position + Vector3.down * bulletOffset, Quaternion.identity);
 				TimeCheck ();
 			}
 		}
