@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Adam: I feel that having separate "manager" classes (e.g. ScoreManager, UIManager, etc.) is more trouble than it's
@@ -10,10 +11,13 @@ using UnityEngine.UI;
 public class GameMgr : MonoBehaviour {
 
 	private int playerScore;
+	private int playerLives; //value to keep track of number of lives for player
 	
 	private UIMgr uiMgr;
 	
-	public Text scoreText;
+	public Text scoreText, goScoreText;
+	public Text LivesText; //text to display those lives
+	public GameObject GOPanel;
 
 	public void AddToScore(int score){
 		playerScore += score;
@@ -21,12 +25,21 @@ public class GameMgr : MonoBehaviour {
 
 	void Awake(){
 		playerScore = 0;
+		playerLives = 3; //initalize playerLives
 	}
 
 	void Update(){
-		scoreText.text = "SCORE: " + playerScore;
+		scoreText.text = goScoreText.text = "SCORE: " + playerScore;
+		LivesText.text = "Lives: " + playerLives; //sets text to show int value for player lives
 	}
 
+	public void ReduceLives(){
+		playerLives--;
+		if (playerLives <= 0) {
+			AdvanceState ();
+		}
+	}
+  
 	public enum GameState {
 		INVALID = -1,
 		NONE = 0,
@@ -60,6 +73,10 @@ public class GameMgr : MonoBehaviour {
 				break;
 			}
 		case GameState.GAME_OVER:
+			{
+				SceneManager.LoadScene ("Global");
+				break;
+			}
 		case GameState.NONE:
 			{
 				Time.timeScale = 0;

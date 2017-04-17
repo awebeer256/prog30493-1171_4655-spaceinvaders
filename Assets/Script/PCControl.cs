@@ -19,6 +19,7 @@ public class PCControl : MonoBehaviour {
 	public float fireballDelay; //in seconds after the fire button is pressed. Tweak to match animation
 
 	public GameObject fireball;
+	private GameMgr gamemgr;
 
 	private enum PlayerState {
 		INVALID = -1,
@@ -41,6 +42,9 @@ public class PCControl : MonoBehaviour {
 				}
 			case PlayerState.SPAWNING:
 				{
+					if (state == PlayerState.SPAWNING)
+						break;
+					gamemgr.ReduceLives ();
 					transform.position = startPos;
 					transform.rotation = startRot;
 					Invoke ("EndInvFrames", spawnGrace);
@@ -76,6 +80,9 @@ public class PCControl : MonoBehaviour {
 		coll = GetComponent<CapsuleCollider> ();
 		if (coll == null)
 			Debug.LogError (string.Format("{0}: couldn't find a Collider", this.GetType ().ToString ()));
+		gamemgr = GameObject.Find("GLOBAL").GetComponent<GameMgr> ();
+		if (gamemgr == null)
+			Debug.LogError (string.Format("{0}: couldn't find a GameMgr", this.GetType ().ToString ()));
 		renderers = GetComponentsInChildren<SkinnedMeshRenderer> ();
 		animStateHashCast = Animator.StringToHash ("Cast");
 		animStateHashDeath = Animator.StringToHash ("Death");
@@ -139,8 +146,9 @@ public class PCControl : MonoBehaviour {
 
 	private void ListenForRespawn() {
 		if (anim.GetCurrentAnimatorStateInfo (0).shortNameHash == animStateHashDeath &&
-		    anim.IsInTransition (0))
+		    anim.IsInTransition (0)) {
 			State = PlayerState.SPAWNING;
+		}
 	}
 
 	private void UpdateVisibility() {
