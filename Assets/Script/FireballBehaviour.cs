@@ -5,6 +5,7 @@ using UnityEngine;
 public class FireballBehaviour : MonoBehaviour {
 
 	private int addScore = 10;
+	private int bigScore = 75;
 	private GameObject globalgo;
 
 	// Use this for initialization
@@ -20,7 +21,9 @@ public class FireballBehaviour : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision collision) {
-		if (collision.gameObject.GetComponent<IsACharacter> () != null && collision.gameObject.GetComponent<IsAEnemyOwned> () != null) {
+		if (collision.gameObject.GetComponent<UFOMovement> () != null) {
+			globalgo.GetComponent<GameMgr> ().AddToScore (bigScore);
+		} else if (collision.gameObject.GetComponent<IsACharacter> () != null && collision.gameObject.GetComponent<IsAEnemyOwned> () != null) {
 			globalgo.GetComponent<GameMgr> ().AddToScore (addScore);
 		}
 		Destroy (gameObject);
