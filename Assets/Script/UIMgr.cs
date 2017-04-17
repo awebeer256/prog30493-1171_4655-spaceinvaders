@@ -24,7 +24,7 @@ public class UIMgr : MonoBehaviour {
 			//NumStates = ((LastState - FirstState) + 1)
 	};
 
-	public List<isaUIPanel> panels;
+	public List<IsAUIPanel> panels;
 	public eUIMgrState state;
 	private eUIMgrState prevState;
 
@@ -55,7 +55,7 @@ public class UIMgr : MonoBehaviour {
 	}
 	public void ShowCurrentPanel() 
 	{
-		foreach (isaUIPanel iap in panels) 
+		foreach (IsAUIPanel iap in panels) 
 		{
 			if (iap.state == state) {
 				iap.gameObject.SetActive (true);
