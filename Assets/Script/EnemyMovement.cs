@@ -14,6 +14,7 @@ public class EnemyMovement : MonoBehaviour {
 
 	public int dir = 1; //changes direction of enemies
 	private float movementSpeed = 0.65f; //controls the speed of the enemies
+	private GameMgr gamemgr;
 
 	void EnemyMovementUpdate(){
 
@@ -26,11 +27,14 @@ public class EnemyMovement : MonoBehaviour {
 			dir = 1; //changes direction of enemies again based on pos of x, also moves enemies down towards player
 			transform.position = new Vector3 (transform.position.x, transform.position.y - 0.5f, transform.position.z);
 		}
+		if (gameObject.GetComponentsInChildren<IsACharacter> ().Length == 0 && gamemgr.State == GameMgr.GameState.IN_GAME) {
+			gamemgr.AdvanceState ();
+		}
 	}
 
 	// Use this for initialization
 	void Start () {
-		
+		gamemgr = GameObject.Find ("GLOBAL").GetComponent<GameMgr> ();
 	}
 	
 	// Update is called once per frame
