@@ -30,4 +30,11 @@ public class UFOMovement : MonoBehaviour {
 	void Update () {
 		UFOMovementUpdate ();
 	}
+
+	void OnCollisionEnter(Collision collision) {
+		GameObject go = collision.gameObject;
+		if (go.GetComponent<IsAProjectile> () != null && go.GetComponent<IsAPlayerOwned> () != null) {
+			Destroy (gameObject);
+		}
+	}
 }
