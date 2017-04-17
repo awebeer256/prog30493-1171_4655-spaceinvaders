@@ -16862,6 +16862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LivesText: {fileID: 1733648064}
+  GOPanel: {fileID: 1742867978}
 --- !u!1 &411657759
 GameObject:
   m_ObjectHideFlags: 0

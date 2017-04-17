@@ -11,6 +11,7 @@ public class GameMgr : MonoBehaviour {
 
 	private int playerLives; //value to keep track of number of lives for player
 	public Text LivesText; //text to display those lives
+	public GameObject GOPanel;
 
 	void Awake(){
 		playerLives = 3; //initalize playerLives
@@ -62,7 +63,8 @@ public class GameMgr : MonoBehaviour {
 		case GameState.NONE:
 			{
 				//TODO show the title screen
-				return false; //switch to true once this is implemented
+				GOPanel.SetActive(false);
+				return true; //switch to true once this is implemented
 			}
 		case GameState.TITLE_MENUS:
 			{
@@ -72,7 +74,8 @@ public class GameMgr : MonoBehaviour {
 		case GameState.IN_GAME:
 			{
 				//TODO show game-over screen
-				return false; //switch to true once this is implemented
+				GOPanel.SetActive(true);
+				return true; //switch to true once this is implemented
 			}
 		default:
 			{
