@@ -10,18 +10,14 @@ public class UFOMovement : MonoBehaviour {
 
 	void UFOMovementUpdate() {
 
-		transform.Translate (Vector3.up * rot * movementSpeed * Time.deltaTime); //moves enemies based on direction and speed of enemies
+		transform.Translate (Vector3.left * rot * movementSpeed * Time.deltaTime, Space.World); //moves enemies based on direction and speed of enemies
 
-		if (transform.position.x <= -30) {
+		if (transform.position.x <= -30 && rot == 1) {
 			rot = -1;
-			transform.Rotate (90, 90, 0);
-			transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
-
-		} else if (transform.position.x >= 30) {
+			transform.rotation = new Quaternion (0.5f, 0.5f, -0.5f, 0.5f);
+		} else if (transform.position.x >= 30 && rot == -1) {
 			rot = 1;
-			transform.Rotate (90, 270, 0);
-			transform.position = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
-
+			transform.rotation = new Quaternion (-0.5f, 0.5f, -0.5f, -0.5f);
 		}
 	}
 
