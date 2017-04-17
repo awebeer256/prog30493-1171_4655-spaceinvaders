@@ -10285,7 +10285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06724caeea78007489572b8719c96d57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  state: 4
 --- !u!114 &240177459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53193,7 +53193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06724caeea78007489572b8719c96d57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  state: 1
 --- !u!114 &1338453813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62903,7 +62903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22.9, y: -20}
+  m_AnchoredPosition: {x: -22.900024, y: -20}
   m_SizeDelta: {x: 30, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1551018055
@@ -62918,7 +62918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06724caeea78007489572b8719c96d57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  state: 4
 --- !u!114 &1551018056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75497,7 +75497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06724caeea78007489572b8719c96d57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
+  state: 2
 --- !u!114 &1859679594
 MonoBehaviour:
   m_ObjectHideFlags: 0
