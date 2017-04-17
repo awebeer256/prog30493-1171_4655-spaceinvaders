@@ -20,8 +20,12 @@ public class GameMgr : MonoBehaviour {
 		LivesText.text = "Lives: " + playerLives; //sets text to show int value for player lives
 	}
 
-	public void ReduceLives(int life){
-		playerLives -= life;
+	public void ReduceLives(){
+		if (playerLives >= 1) {	
+			playerLives--;
+		} else if (playerLives == 0) {
+			AdvanceState ();
+		}
 	}
 
 	public enum GameState {

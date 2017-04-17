@@ -13,7 +13,6 @@ public class EnemyBulletLogic : MonoBehaviour {
 
 	public GameObject enemyBullet;
 	private GameObject globalgo;
-	private int reduceLife = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -32,8 +31,7 @@ public class EnemyBulletLogic : MonoBehaviour {
 			//destory one block per sheild
 		} else if (collision.gameObject.GetComponent<IsACharacter> () != null 
 			&& collision.gameObject.GetComponent<IsAPlayerOwned>() != null) {
-			globalgo.GetComponent<GameMgr> ().ReduceLives (reduceLife);
-			//reduce number of lives for player
+			globalgo.GetComponent<GameMgr> ().ReduceLives (); //reduce number of lives for player
 			//respawn player in middle of screen 
 		}
 		Destroy (gameObject); //gameobject is destroyed when it collides with anything 
