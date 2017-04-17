@@ -127,6 +127,20 @@ public class PCControl : MonoBehaviour {
 	/// </summary>
 	private void Fire() {
 		Instantiate (fireball, transform.position + Vector3.up * fireballHeightOffset, Quaternion.identity);
+		playerShoot("Player");
+
+	}
+
+	public void playerShoot(string gameObjectName){
+		GameObject gm = GameObject.Find(gameObjectName);
+		if (gm != null)
+		{
+			AudioSource asource = gm.GetComponent<AudioSource> ();
+			if (asource == null) {
+				asource = gm.AddComponent<AudioSource> ();
+			}
+			asource.Play ();
+		}
 	}
 
 	void OnCollisionEnter(Collision collision) {
