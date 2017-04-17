@@ -27,7 +27,7 @@ public class GameMgr : MonoBehaviour {
 			AdvanceState ();
 		}
 	}
-
+  
 	public enum GameState {
 		INVALID = -1,
 		NONE = 0,
