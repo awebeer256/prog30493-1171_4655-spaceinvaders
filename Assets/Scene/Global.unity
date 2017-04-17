@@ -5937,7 +5937,7 @@ GameObject:
   - component: {fileID: 133392016}
   - component: {fileID: 1948271865}
   m_Layer: 5
-  m_Name: Panel_Title
+  m_Name: TitlePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34351,7 +34351,7 @@ GameObject:
   - component: {fileID: 817988902}
   - component: {fileID: 817988901}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: QuitPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79893,7 +79893,7 @@ GameObject:
   - component: {fileID: 1990476850}
   - component: {fileID: 241049944}
   m_Layer: 5
-  m_Name: Panel_LevelSelect
+  m_Name: LevelSelectPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
