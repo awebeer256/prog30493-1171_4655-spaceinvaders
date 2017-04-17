@@ -23,8 +23,10 @@ public class FireballBehaviour : MonoBehaviour {
 	void OnCollisionEnter(Collision collision) {
 		if (collision.gameObject.GetComponent<UFOMovement> () != null) {
 			globalgo.GetComponent<GameMgr> ().AddToScore (bigScore);
+			Destroy (collision.gameObject);
 		} else if (collision.gameObject.GetComponent<IsACharacter> () != null && collision.gameObject.GetComponent<IsAEnemyOwned> () != null) {
 			globalgo.GetComponent<GameMgr> ().AddToScore (addScore);
+			Destroy (collision.gameObject);
 		}
 		Destroy (gameObject);
 	}
