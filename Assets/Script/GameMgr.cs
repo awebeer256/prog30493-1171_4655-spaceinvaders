@@ -9,11 +9,10 @@ using UnityEngine.UI;
 /// </summary>
 public class GameMgr : MonoBehaviour {
 
-	public static int playerLives; //value to keep track of number of lives for player
-	Text LivesText; //text to display those lives
+	private int playerLives; //value to keep track of number of lives for player
+	public Text LivesText; //text to display those lives
 
 	void Awake(){
-		LivesText = GetComponent<Text> (); //gets text component to let us change text 
 		playerLives = 3; //initalize playerLives
 	}
 
@@ -21,6 +20,14 @@ public class GameMgr : MonoBehaviour {
 		LivesText.text = "Lives: " + playerLives; //sets text to show int value for player lives
 	}
 
+	public void ReduceLives(){
+		if (playerLives > 0) {	
+			playerLives--;
+		} else if (playerLives <= 0) {
+			AdvanceState ();
+		}
+	}
+  
 	public enum GameState {
 		INVALID = -1,
 		NONE = 0,
