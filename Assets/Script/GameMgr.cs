@@ -17,7 +17,7 @@ public class GameMgr : MonoBehaviour {
 	}
 
 	void Update(){
-		//LivesText.text = "Lives: " + playerLives; //sets text to show int value for player lives
+		LivesText.text = "Lives: " + playerLives; //sets text to show int value for player lives
 	}
 
 	public void ReduceLives(int life){

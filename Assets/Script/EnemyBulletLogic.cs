@@ -12,26 +12,29 @@ public class EnemyBulletLogic : MonoBehaviour {
 	 */
 
 	public GameObject enemyBullet;
+	private GameObject globalgo;
 	private int reduceLife = 1;
+
+	// Use this for initialization
+	void Start () {
+		globalgo = GameObject.Find ("GLOBAL");
+		if (globalgo == null)
+			Debug.LogError ("Unable to find GLOBAL game object");
+	}
+	
+	// Update is called once per frame
+	void Update () {
+
+	}
 
 	void OnCollisionEnter(Collision collision){
 		if (collision.gameObject.GetComponent<IsAShield> () != null) {
 			//destory one block per sheild
 		} else if (collision.gameObject.GetComponent<IsACharacter> () != null 
 			&& collision.gameObject.GetComponent<IsAPlayerOwned>() != null) {
-			 //reduce number of lives for player
+			//reduce number of lives for player
 			//respawn player in middle of screen 
 		}
 		Destroy (gameObject); //gameobject is destroyed when it collides with anything 
-	}
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
 	}
 }
