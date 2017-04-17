@@ -30,34 +30,33 @@ public class GameMgr : MonoBehaviour {
 	/// <summary>
 	/// Advances game to the next state, handling the associated transitions.
 	/// </summary>
-	/// <returns><c>true</c>, if state was advanced, <c>false</c> otherwise.</returns>
-	public bool AdvanceState() { //Not sure whether we need a return value, but it's there in case
+	public void AdvanceState() { //Removed bool return so it could be bound to button click
 		switch (State) {
 		case GameState.INVALID:
 			{
 				Debug.LogError ("Attempted to advance game state while current state was " + State);
-				return false;
+				break;
 			}
 		case GameState.GAME_OVER:
 		case GameState.NONE:
 			{
 				//TODO show the title screen
-				return false; //switch to true once this is implemented
+				break;
 			}
 		case GameState.TITLE_MENUS:
 			{
 				//TODO show main game screen in game-start configuration
-				return false; //switch to true once this is implemented
+				break;
 			}
 		case GameState.IN_GAME:
 			{
 				//TODO show game-over screen
-				return false; //switch to true once this is implemented
+				break;
 			}
 		default:
 			{
 				Debug.LogError ("GameMgr.AdvanceState() encountered unhandled current state: " + State);
-				return false;
+				break;
 			}
 		}
 	}
