@@ -21,9 +21,9 @@ public class GameMgr : MonoBehaviour {
 	}
 
 	public void ReduceLives(){
-		if (playerLives >= 1) {	
+		if (playerLives > 0) {	
 			playerLives--;
-		} else if (playerLives == 0) {
+		} else if (playerLives <= 0) {
 			AdvanceState ();
 		}
 	}
